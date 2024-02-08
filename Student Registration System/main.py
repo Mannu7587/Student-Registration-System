@@ -31,6 +31,6 @@ add_data = options_form.form_submit_button()
 if add_data:
     new_data = {"NAME": user_name, "BRANCH": user_branch, "ID": int(user_id), "Contact": int(user_c) , "Address": user_ad , "Profile": image_file}
 
-    df = df.append(new_data, ignore_index=True)
+    df = df._append(new_data, ignore_index=True)
     df.to_csv("class.csv", index=False)
 
